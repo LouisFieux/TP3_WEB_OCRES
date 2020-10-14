@@ -37,10 +37,9 @@ function start()
   function getThreeDayForecast() 
   {
 //  console.log(api.openweathermap.org/data/2.5/forecast/daily?q={paris}&cnt={3});
-  }
-  const ville = document.getElementById("city-input").value;
+  const city = document.getElementById("city-input").value;
   // Création de l'objet apiWeather
-  const apiWeather = new API_WEATHER(ville);
+  const apiWeather = new API_WEATHER(city);
   // Appel de la fonction fetchThreeDayForecast
   apiWeather
     .fetchThreeDayForecast()
@@ -71,3 +70,5 @@ function start()
       // Affiche une erreur
       console.error(error);
     });
+
+  }
